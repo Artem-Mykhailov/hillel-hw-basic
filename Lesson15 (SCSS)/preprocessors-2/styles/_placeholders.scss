@@ -1,0 +1,14 @@
+%btn-default {
+  display: inline-block;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+
+%ellipis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

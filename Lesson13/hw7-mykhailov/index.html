@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form method="POST" class="contact-form">
+        <header class="contact-header">
+          <h2 class="form-title">Contact Us</h2>
+          <button type="reset" class="btn-reset fas fa-times"></button>
+        </header>
+
+        <div class="form-content">
+          <input
+            type="text"
+            name="username"
+            class="form-field"
+            placeholder="Your name"
+          />
+          <input
+            type="text"
+            name="email"
+            class="form-field"
+            placeholder="Your email"
+          />
+          <textarea
+            name="comment"
+            class="form-field"
+            rows="5"
+            placeholder="Your comment"
+            maxlength="300"
+          ></textarea>
+          <button class="btn-submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

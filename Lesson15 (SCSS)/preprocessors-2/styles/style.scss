@@ -1,0 +1,94 @@
+@import "fonts";
+@import "variables";
+@import "placeholders";
+@import "mixins";
+
+body {
+  font-family: "Georgia", serif;
+}
+
+.#{$partName} {
+  background-color: $secondaryColor;
+
+  .#{$partName}-title {
+    color: $titleColor;
+    font-size: $fontSizeXL + 10;
+  }
+
+  .#{$partName}-btn {
+    border: none;
+    background-color: $subtitleColor;
+    cursor: pointer;
+
+    &:hover {
+      border: $highlighBorder;
+      background-color: mix(red, $hoverColor);
+    }
+  }
+}
+
+.btn-primary {
+  // @extend %btn-default;
+  // background-color: #2b2bff;
+
+  @include defaultBtn(#2b2bff);
+}
+
+.btn-success {
+  @include defaultBtn(#00c521);
+}
+
+.btn-danger {
+  @include defaultBtn(#d10202) {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+button {
+  $test: 2;
+
+  @if $test > 9 {
+    border: 10px solid green;
+  } @else {
+    border: 10 solid black;
+  }
+}
+
+// $i: 0;
+// @while $i <= 100 {
+//   .list-item#{$i} {
+//     background-color: red;
+//   }
+
+//   $i: $i + 5;
+// }
+
+.assessment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-radius: 100vw;
+  background-color: grey;
+  font-size: 32px;
+}
+
+@for $i from 1 through 100 {
+  $textContent: "Оценка: #{$i}";
+
+  .assessment#{$i} {
+    margin-bottom: 50px;
+    background-color: hsl($i, 100%, 50%);
+
+    @if $i <= 50 {
+      $textContent: $textContent + " - можно и лучше :(";
+    } @else if $i >= 90 {
+      $textContent: $textContent + " - молодец, круто :)";
+    }
+
+    &::after {
+      content: $textContent;
+    }
+  }
+}

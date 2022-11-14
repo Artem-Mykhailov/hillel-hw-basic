@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 500px;
+}
+
+/* GIF-1 */
+
+.gif1 .box {
+  width: 300px;
+  height: 150px;
+  margin-bottom: 50px;
+  transition: all 1s linear 0.25s;
+}
+
+.gif1 {
+  background-color: rgb(180, 180, 180);
+}
+
+.textbox {
+  margin-bottom: 50px;
+  font-size: 64px;
+  font-weight: bold;
+  color: blueviolet;
+  text-shadow: 1px 1px 0px rgb(216, 174, 255);
+  transition: all 1s linear 0.25s;
+}
+
+.textbox:hover {
+  text-shadow: 10px 10px 4px rgb(216, 174, 255);
+}
+
+.box1 {
+  background-color: crimson;
+  border: 4px solid crimson;
+  border-radius: 0px;
+}
+
+.box1:hover {
+  background-color: salmon;
+  border-radius: 13em 0em/2em 0em;
+}
+
+.box2 {
+  background-color: goldenrod;
+  border: 7px solid goldenrod;
+}
+
+.box2:hover {
+  background-color: rgb(238, 238, 83);
+  border-left-color: rgb(104, 83, 32);
+  border-top-color: rgb(104, 83, 32);
+}
+
+.box3 {
+  background-color: lightskyblue;
+  border: 7px solid lightseagreen;
+  outline: rgb(180, 180, 180) solid 0px;
+  outline-offset: 0px;
+}
+
+.box3:hover {
+  outline: rgba(13, 1, 177, 0.726) solid 10px;
+  outline-offset: 10px;
+}
+
+.box4 {
+  background-color: brown;
+  box-shadow: 0 0 0px black;
+}
+
+.box4:hover {
+  width: 400px;
+  height: 100px;
+  box-shadow: 0 18px 15px rgba(0, 0, 0, 0.521);
+}
+
+/* GIF-2 */
+
+.gif2 {
+  background-color: cornflowerblue;
+}
+
+.gif2 .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  font-size: 0;
+}
+
+.gif2 .box:hover .square1 {
+  transform: rotateZ(90deg);
+}
+
+.backtext {
+  position: absolute;
+  top: 125px;
+  left: 70px;
+  text-align: center;
+  font-size: 40px;
+  color: saddlebrown;
+  font-weight: bold;
+}
+
+.square1,
+.square2,
+.square3,
+.square4 {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  transition: all 1s linear 0.25s;
+  transform: rotateZ(0deg);
+}
+
+.square1 {
+  background-color: black;
+  transform-origin: left top;
+}
+
+.gif2 .box:hover .square1 {
+  transform: rotateZ(90deg);
+}
+
+.square2 {
+  background-color: wheat;
+  transform-origin: right top;
+}
+
+.gif2 .box:hover .square2 {
+  transform: rotateZ(-90deg);
+}
+
+.square3 {
+  background-color: gold;
+  transform-origin: left bottom;
+}
+
+.gif2 .box:hover .square3 {
+  transform: rotateZ(-90deg);
+}
+
+.square4 {
+  background-color: silver;
+  transform-origin: right bottom;
+}
+
+.gif2 .box:hover .square4 {
+  transform: rotateZ(90deg);
+}
+
+/* GIF-3 */
+
+.gif3 {
+  background-color: darkkhaki;
+}
+
+.gif3 .box {
+  font-size: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: aqua;
+  animation: bounce 2s ease-in-out infinite forwards;
+}
+
+@keyframes bounce {
+  0% {
+    font-size: 0px;
+  }
+
+  75% {
+    font-size: 140px;
+  }
+
+  100% {
+    font-size: 100px;
+  }
+}
+
+/* GIF-4 */
+
+.gif4 {
+  background-color: rgb(175, 145, 235);
+}
+
+.gif4 .box {
+  perspective: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cube1,
+.cube2,
+.cube3 {
+  position: absolute;
+}
+
+.cube1 {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 99, 71, 0.925);
+  animation: rotate 2s linear 0.5s infinite;
+}
+.cube2 {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(128, 128, 0, 0.805);
+  z-index: -1;
+  animation: rotate 3s linear 0.5s infinite;
+}
+.cube3 {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(187, 101, 16, 0.648);
+  z-index: -2;
+  animation: rotate 4s linear 0.5s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

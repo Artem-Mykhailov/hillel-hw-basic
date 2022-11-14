@@ -1,0 +1,147 @@
+@import url(fonts.css);
+@import url("https://fonts.googleapis.com/css2?family=Allerta&display=swap");
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  font-family: "Avenir", sans-serif;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+/* NAVBAR */
+.G-letter {
+  font-size: 26px;
+}
+
+.n-text {
+  font-family: "Avenir", sans-serif;
+  font-size: 18px;
+  background: linear-gradient(45deg, #087911 30%, #82a71b 60%, #42d473 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #185818;
+}
+
+.n-text:hover {
+  background: linear-gradient(45deg, #42d473 30%, #82a71b 60%, #087911 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #185818;
+  text-shadow: 1px 1px 9px #6dc081;
+}
+
+/* CAROUSEL */
+.crsl {
+  width: 100%;
+}
+.carousel-item img {
+  width: 100%;
+  height: 464px;
+  object-fit: cover;
+}
+
+.crsl-text {
+  font-family: "Allerta", sans-serif;
+  color: rgba(222, 243, 165, 0.8);
+}
+
+.btn-crsl {
+  border: none;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 40px 40px #c2db34 inset, 0 0 0 0 #b7db34;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-crsl:hover {
+  border: none;
+  color: rgba(222, 243, 165, 0.8);
+  box-shadow: 0 0 10px 0 #c2db34 inset, 0 0 10px 4px #b7db34;
+}
+
+/* GREENERY */
+.greenery-card {
+  border: none;
+}
+
+.img-greenery {
+  width: 100%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.greenery-title {
+  font-family: "Allerta", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #136408 50%, #64830f 25%, #228d07 25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 4px;
+}
+
+.greenery-text {
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+}
+
+.btn-greenery {
+  color: rgb(0, 0, 0);
+  transition: all 0.5s;
+  position: relative;
+  border: none;
+}
+.btn-greenery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(76, 223, 18, 0.5);
+  transition: all 0.3s;
+}
+.btn-greenery:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.btn-greenery::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(61, 243, 24, 0.5);
+  transform: scale(1.2, 1.2);
+}
+.btn-greenery:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+/* GARDENING */
+.gardening-title {
+  font-family: "Avenir", sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+.gardening-text {
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+}
+
+.gardening-img {
+  width: 100%;
+  height: 500px;
+  width: 500px;
+  object-fit: contain;
+}

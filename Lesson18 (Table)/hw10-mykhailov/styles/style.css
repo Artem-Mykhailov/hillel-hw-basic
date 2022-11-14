@@ -1,0 +1,90 @@
+@import "https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ubuntu&display=swap";
+.container .calories th, .container .calories td {
+  padding: 8px;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 3px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  background-image: url(../images/bananas.png);
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  min-width: 1140px;
+  padding: 0 15px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.container .calories {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.container .calories-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8px 0;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: linear-gradient(45deg, #020342 33%, #422aaa 66%, #5664db);
+  color: #918923;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 0 10px rgba(4, 6, 82, 0.788);
+}
+.container .calories-title-number {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.container .calories .calories-content tr:nth-child(2n) {
+  background-color: rgba(75, 65, 165, 0.5);
+}
+.container .calories td {
+  font-size: 16px;
+  background-color: rgba(115, 113, 209, 0.5);
+  border: 1px solid transparent;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.container .calories tbody:hover td {
+  color: transparent;
+  text-shadow: 0 0 3px #7b679c;
+}
+.container .calories tbody:hover tr:hover td {
+  color: #000000;
+  text-shadow: none;
+}
+.container .calories th {
+  position: relative;
+  font-size: 18px;
+  color: rgba(241, 241, 241, 0.89);
+  background-color: rgba(54, 18, 214, 0.6);
+  border: 2px solid transparent;
+}
+.container .calories .age {
+  width: 150px;
+}
+.container .calories td:empty::after {
+  content: "-";
+}
+
+/*# sourceMappingURL=style.css.map */

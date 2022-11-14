@@ -1,0 +1,443 @@
+@import url(fonts.css);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 20px 50px;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  background-color: #01996d;
+}
+
+.btn-primary:hover {
+  background-color: #35c79d;
+  color: #243530;
+}
+
+.header-logo,
+.footer-logo {
+  font-family: "Avenir", sans-serif;
+  font-weight: 900;
+  line-height: 55px;
+}
+
+.hero-slogan,
+.conception-slogan,
+.story-slogan,
+.product-slogan,
+.custom-card-title {
+  margin: 0;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  line-height: 79px;
+  font-size: 50px;
+  color: #01996d;
+}
+
+.hero-text,
+.conception-text,
+.card-text,
+.product-text,
+.custom-username {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 31px;
+  color: #484848;
+}
+
+.section-title,
+.custom-card-text {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #424242;
+}
+
+/* =====Header====== */
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  z-index: 100;
+  border-bottom: 1px solid #d6d6d6;
+  background-color: #fff;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 30px;
+  color: #01996d;
+}
+
+.header-logo:hover {
+  color: #0eb384;
+  text-shadow: 0 0 4px #000;
+}
+
+.header-menu {
+  margin: 0 15px;
+}
+
+.menu-list {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 72px;
+}
+
+.menu-link {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: #292929;
+}
+
+.menu-link:hover {
+  text-shadow: 0 0 1px #000;
+}
+
+.header-actions .menu-link {
+  color: #000;
+  margin-right: 35px;
+}
+
+/* =====Hero===== */
+
+.hero {
+  padding: 173px 0 338px;
+  background-image: url(../images/hero-bgi.jpg);
+  background-color: teal;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+}
+
+.hero-content {
+  max-width: 440px;
+}
+
+.hero-content .btn-primary {
+  margin-top: 52px;
+}
+
+.hero-slogan {
+  line-height: 74px;
+  font-size: 65px;
+}
+
+.hero-text {
+  margin-top: 30px;
+}
+
+/* =====How it works===== */
+
+.project-conception {
+  padding: 167px 0 50px;
+}
+
+.conception-content {
+  display: flex;
+}
+
+.conception-slogan {
+  flex-basis: 50%;
+  margin-right: 132px;
+}
+
+.conception-text {
+  flex-basis: 50%;
+  color: #424242;
+  align-self: center;
+}
+
+.conception-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 134px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.card-item {
+  max-width: 401px;
+}
+
+.card-item:nth-child(2) {
+  margin-top: 284px;
+}
+
+.card-title {
+  margin: 0;
+  padding: 100px 0 0 88px;
+  position: relative;
+  font-family: "Georgia", serif;
+  font-size: 30px;
+  color: #000000;
+}
+
+.third-title {
+  position: relative;
+  padding-left: 125px;
+}
+
+.card-title-text {
+  position: relative;
+  z-index: 10;
+}
+
+.card-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Georgia", serif;
+  font-weight: normal;
+  font-size: 150px;
+  line-height: 150px;
+  color: rgba(1, 153, 109, 0.2);
+}
+
+.card-text {
+  margin-top: 55px;
+  color: #424242;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-image:nth-child(1) {
+  margin-top: 60px;
+}
+
+.card-image:nth-child(2) {
+  margin-top: 37px;
+}
+
+.card-image:nth-child(3) {
+  margin-top: 48px;
+}
+
+/* =====Success Story===== */
+
+.success-story {
+  padding: 229px 0 176px;
+  background-color: #245852;
+}
+
+.success-story .container {
+  display: flex;
+  max-width: 1530px;
+}
+
+.story-content {
+  min-width: 580px;
+  align-self: center;
+}
+
+.story-slogan {
+  color: #ffffff;
+}
+
+.story-text {
+  margin: 0;
+  margin-top: 33px;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  line-height: 39px;
+  color: #ffffff;
+}
+
+.story-content .btn-primary {
+  margin-top: 57px;
+}
+
+.story-media {
+  flex-grow: 1;
+  position: relative;
+}
+
+.story-video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.story-play {
+  position: absolute;
+  top: 39%;
+  left: 42%;
+  width: 80px;
+  height: 80px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* =====Our product===== */
+
+.product {
+  padding: 120px 0 168px;
+}
+
+.product .container {
+  display: flex;
+}
+
+.custom-content {
+  flex-basis: 50%;
+  position: relative;
+  padding: 0 0 74px 60px;
+}
+
+.custom-image {
+  display: block;
+  width: 100%;
+  border-radius: 18px;
+}
+
+.custom-card {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 300px;
+  padding: 22px 58px 30px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+}
+
+.custom-card-text {
+  display: inline-block;
+  padding: 0 4px 8px;
+  font-size: 15px;
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+
+.custom-card-avatar {
+  display: block;
+  margin: 14px auto 11px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.custom-card-username {
+  font-size: 12px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.custom-card-title {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.custom-card-list {
+  margin: 16px 0 0;
+  text-align: left;
+  padding-left: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  list-style-position: inside;
+}
+
+.custom-card-item:nth-child(2) {
+  margin-top: 16px;
+}
+
+.product-content {
+  flex-basis: 50%;
+  margin-left: 87px;
+}
+
+.product-slogan {
+  margin-top: 10px;
+}
+
+.product-text {
+  margin-top: 20px;
+}
+
+.product-content .btn-primary {
+  margin-top: 40px;
+}
+
+/* =====FOOTER===== */
+
+.footer {
+  padding: 95px 0 144px;
+  background-color: #245852;
+}
+
+.footer-logo {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.footer-logo:hover,
+.footer-menu-link:hover {
+  color: #35c79d;
+  text-shadow: 0 0 4px #000;
+}
+
+.footer-menu {
+  margin-top: 60px;
+}
+
+.footer-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-menu-link {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #ffffff;
+}

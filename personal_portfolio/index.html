@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dmytro Sokolovskyi</title>
+    <!-- NORMALIZE -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="grid">
+      <input type="checkbox" id="sidebar-trigger" />
+      <!-- ============== SIDEBAR ============== -->
+      <aside class="sidebar">
+        <nav class="nav">
+          <a href="#" class="nav-logo" aria-label="logotype"></a>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#hero" class="nav-link">
+                <i class="nav-link-icon fas fa-home"></i>
+                <span class="nav-link-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                <i class="nav-link-icon fas fa-user"></i>
+                <span class="nav-link-text">About</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-link-icon fas fa-id-card"></i>
+                <span class="nav-link-text">Resume</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-link-icon fas fa-briefcase"></i>
+                <span class="nav-link-text">Portfolio</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-link-icon fas fa-envelope"></i>
+                <span class="nav-link-text">Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <a
+            class="scroll-top fas fa-chevron-up"
+            href="#top"
+            aria-label="scroll to top"
+          ></a>
+        </nav>
+
+        <label
+          for="sidebar-trigger"
+          class="sidebar-toggle fas fa-bars"
+          aria-label="navigation toggle button"
+        ></label>
+      </aside>
+      <!-- ============== CONTENT ============== -->
+      <main class="content">
+        <div id="top"></div>
+        <!-- ============== HERO ============== -->
+        <section id="hero" class="section hero">
+          <div class="container">
+            <h1 class="main-title">Dmytro Sokolovskyi</h1>
+            <p class="hero-slogan">I am a Front-End Developer</p>
+            <ul class="hero-socials">
+              <li class="hero-socials-item">
+                <a
+                  href="#"
+                  class="hero-socials-link fab fa-facebook-f"
+                  aria-label="link to facebook profile"
+                ></a>
+              </li>
+              <li class="hero-socials-item">
+                <a
+                  href="#"
+                  class="hero-socials-link fab fa-github"
+                  aria-label="link to github profile"
+                ></a>
+              </li>
+              <li class="hero-socials-item">
+                <a
+                  href="#"
+                  class="hero-socials-link fab fa-linkedin-in"
+                  aria-label="link to linkedin profile"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============== ABOUT ============== -->
+        <section id="about" class="section about">
+          <div class="container">
+            <h2 class="section-title">
+              About <span class="highlighted-text">Me</span>
+            </h2>
+
+            <div class="about-content">
+              <div class="about-description">
+                <p class="about-text box">
+                  <span class="about-greeting highlighted-text">Hello,</span>
+                  I am Bolby Doe, web developer from London, United Kingdom. I
+                  have rich experience in web site design and building and
+                  customization, also I am good at WordPress.
+                </p>
+
+                <div class="about-actions">
+                  <a href="assets/cv.docx" download class="btn btn--secondary">
+                    Download CV
+                  </a>
+                  <button type="button" class="btn btn--secondary">
+                    Hire Me
+                  </button>
+                </div>
+              </div>
+
+              <div class="about-avatar">
+                <img src="assets/images/user-pic.jpg" alt="User picture" />
+              </div>
+            </div>
+
+            <div class="about-skills">
+              <h3 class="section-subtitle">
+                Here Are <span class="highlighted-text">My Skills</span>
+              </h3>
+              <ul class="about-skills-list">
+                <li class="about-skills-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/HTML5"
+                    target="_blank"
+                    class="about-skills-link box"
+                  >
+                    <img
+                      src="assets/images/skills-logo-html.svg"
+                      alt=""
+                      class="about-skills-img"
+                    />
+                    <h4 class="about-skills-label html">HTML5</h4>
+                  </a>
+                </li>
+                <li class="about-skills-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/CSS"
+                    target="_blank"
+                    class="about-skills-link box"
+                  >
+                    <img
+                      src="assets/images/skills-logo-css.svg"
+                      alt=""
+                      class="about-skills-img"
+                    />
+                    <h4 class="about-skills-label css">CSS3</h4>
+                  </a>
+                </li>
+                <li class="about-skills-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/JavaScript"
+                    target="_blank"
+                    class="about-skills-link box"
+                  >
+                    <img
+                      src="assets/images/skills-logo-js.svg"
+                      alt=""
+                      class="about-skills-img"
+                    />
+                    <h4 class="about-skills-label js">JavaScript</h4>
+                  </a>
+                </li>
+                <li class="about-skills-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Sass"
+                    target="_blank"
+                    class="about-skills-link box"
+                  >
+                    <img
+                      src="assets/images/skills-logo-sass.svg"
+                      alt=""
+                      class="about-skills-img"
+                    />
+                    <h4 class="about-skills-label sass">SASS</h4>
+                  </a>
+                </li>
+                <li class="about-skills-item">
+                  <a
+                    href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                    target="_blank"
+                    class="about-skills-link box"
+                  >
+                    <img
+                      src="assets/images/skills-logo-bootstrap.svg"
+                      alt=""
+                      class="about-skills-img"
+                    />
+                    <h4 class="about-skills-label bootstrap">Bootstrap</h4>
+                  </a>
+                </li>
+                <li class="about-skills-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Gulp"
+                    target="_blank"
+                    class="about-skills-link box"
+                  >
+                    <img
+                      src="assets/images/skills-logo-gulp.svg"
+                      alt=""
+                      class="about-skills-img"
+                    />
+                    <h4 class="about-skills-label gulp">Gulp</h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

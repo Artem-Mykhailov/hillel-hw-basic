@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+table.employees,
+table.marks {
+  /* border-spacing: 0px; */
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  table-layout: fixed;
+  empty-cells: hide;
+}
+
+.marks-header {
+  background-color: grey;
+}
+
+.employees-title,
+.marks-title {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  /* caption-side: bottom; */
+}
+
+.employees th,
+.employees td,
+.marks th,
+.marks td {
+  border: 1px solid;
+  margin: 10px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.marks-content tr:nth-child(odd) {
+  /* background-color: lightblue; */
+}
+
+.marks-content tr:hover {
+  background-color: #efefef;
+}
+
+td:empty::after {
+  content: "-";
+}
+
+.number-col {
+  width: 80px;
+}
+
+.total-cell {
+  background-color: lightgrey;
+}

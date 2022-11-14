@@ -1,0 +1,113 @@
+@import url(font.css);
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+/* =====FORM HEADER===== */
+
+.contact-header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 28px 0;
+  border-radius: 6px 6px 0px 0px;
+  background-color: #286782;
+}
+
+.form-title {
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.btn-reset {
+  position: absolute;
+  right: 28px;
+  top: 27px;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.btn-reset:hover,
+.btn-reset:focus {
+  color: tomato;
+  outline: none;
+}
+
+/* =====FORM CONTENT===== */
+
+.form-content {
+  padding: 40px 60px;
+  background: #efefef;
+  border-radius: 0px 0px 6px 6px;
+}
+
+.form-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 11px 15px;
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.form-field:hover {
+  box-shadow: 0 0 4px #286782;
+}
+
+.form-field:focus {
+  outline: none;
+  box-shadow: 0 0 10px #286782;
+}
+
+.btn-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 65px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  background: #286782;
+  border-radius: 6px;
+}
+
+.btn-submit:hover {
+  box-shadow: 0 0 3px 3px #4d9fc2ad;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: #286782d5;
+}
+
+.btn-submit:focus {
+  outline: none;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: rgba(66, 55, 55, 0.534);
+}

@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+p,
+h2 {
+  margin: 0;
+}
+
+input {
+  display: none;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  max-width: 1140px;
+  margin: 20px auto;
+  grid-template-columns: repeat 4, minmax(200px, 1fr);
+  grid-template-rows: repeat 4, 20%;
+  grid-gap: 5px;
+  grid-template-areas: "slider gallery gallery split" "apple  gallery gallery split" "nyc    nyc     sidebar activity";
+}
+.container .gallery-block {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+}
+.container .gallery-block .return-icon {
+  display: none;
+}
+.container .gallery-block:hover .gallery-block-hover {
+  opacity: 1;
+  z-index: 1;
+}
+.container .gallery-block-hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  opacity: 0;
+  font-size: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  color: wheat;
+  transition: all 0.5s;
+}
+.container .gallery-block-hover .svg-pic-c {
+  display: inline-block;
+  margin-right: 5px;
+}
+.container .gallery-block-hover .svg-pic {
+  display: inline-block;
+  margin-right: 3px;
+}
+.container .gallery-block-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 54px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  color: bisque;
+  z-index: 100;
+}
+.container .gallery-block-text .category {
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgba(202, 196, 196, 0.507);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.container .gallery-block-text .block-title {
+  font-size: 18px;
+  transition: all 0.7s;
+}
+.container .gallery-block-text .block-title:hover {
+  color: #2b5de4;
+}
+.container .gallery-block-text .big-title {
+  font-size: 36px;
+}
+.container .slider {
+  background-image: url(https://themify.me/demo/themes/peak/files/2016/05/angle-960x1024-600x600.jpg);
+  grid-area: slider;
+}
+.container #slider:checked ~ .slider,
+.container #gallery:checked ~ .gallery,
+.container #split:checked ~ .split,
+.container #apple:checked ~ .apple,
+.container #nyc:checked ~ .nyc,
+.container #sidebar:checked ~ .sidebar,
+.container #activity:checked ~ .activity {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  background-size: auto;
+}
+.container #slider:checked ~ .slider .gallery-block-hover,
+.container #gallery:checked ~ .gallery .gallery-block-hover,
+.container #split:checked ~ .split .gallery-block-hover,
+.container #apple:checked ~ .apple .gallery-block-hover,
+.container #nyc:checked ~ .nyc .gallery-block-hover,
+.container #sidebar:checked ~ .sidebar .gallery-block-hover,
+.container #activity:checked ~ .activity .gallery-block-hover {
+  display: none;
+}
+.container #slider:checked ~ .slider .gallery-block-text,
+.container #gallery:checked ~ .gallery .gallery-block-text,
+.container #split:checked ~ .split .gallery-block-text,
+.container #apple:checked ~ .apple .gallery-block-text,
+.container #nyc:checked ~ .nyc .gallery-block-text,
+.container #sidebar:checked ~ .sidebar .gallery-block-text,
+.container #activity:checked ~ .activity .gallery-block-text {
+  display: none;
+}
+.container #slider:checked ~ .slider .return-icon,
+.container #gallery:checked ~ .gallery .return-icon,
+.container #split:checked ~ .split .return-icon,
+.container #apple:checked ~ .apple .return-icon,
+.container #nyc:checked ~ .nyc .return-icon,
+.container #sidebar:checked ~ .sidebar .return-icon,
+.container #activity:checked ~ .activity .return-icon {
+  display: block;
+  position: absolute;
+  top: 12%;
+  left: 66%;
+  font-size: 40px;
+  color: white;
+  transition: all 0.5s;
+}
+.container #slider:checked ~ .slider .return-icon:hover,
+.container #gallery:checked ~ .gallery .return-icon:hover,
+.container #split:checked ~ .split .return-icon:hover,
+.container #apple:checked ~ .apple .return-icon:hover,
+.container #nyc:checked ~ .nyc .return-icon:hover,
+.container #sidebar:checked ~ .sidebar .return-icon:hover,
+.container #activity:checked ~ .activity .return-icon:hover {
+  color: #2b5de4;
+}
+.container #split:checked ~ .split .return-icon {
+  color: black;
+}
+.container .gallery {
+  background-image: url(https://themify.me/demo/themes/peak/files/2016/04/alone-971122_1920-1024x680-600x600.jpg);
+  grid-area: gallery;
+}
+.container .split {
+  background-image: url(https://themify.me/demo/themes/peak/files/2016/05/person-731142_1920-1024x682-600x600.jpg);
+  grid-area: split;
+}
+.container .apple {
+  background-image: url(https://themify.me/demo/themes/peak/files/2016/05/apple-1209003_1920-1024x652-600x600.jpg);
+  grid-area: apple;
+}
+.container .nyc {
+  background-image: url(https://themify.me/demo/themes/peak/files/2016/05/new-york-690567_1280-1024x684-600x600.jpg);
+  grid-area: nyc;
+}
+.container .sidebar {
+  background-image: url(https://themify.me/demo/themes/peak/files/2016/04/knit-869221_1920-1024x682-600x600.jpg);
+  grid-area: sidebar;
+}
+.container .activity {
+  background-image: url(https://themify.me/demo/themes/peak/files/2016/04/photo-1422665717225-1a37f226c92a.jpeg-1024x683-600x600.jpg);
+  grid-area: activity;
+}
+
+@media only screen and (max-width: 681px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 50%);
+    grid-gap: 0px;
+    grid-template-areas: "slider" "gallery" "split" "apple" "nyc" "sidebar" "activity";
+  }
+  .container #slider:checked ~ .slider,
+.container #gallery:checked ~ .gallery,
+.container #split:checked ~ .split,
+.container #apple:checked ~ .apple,
+.container #nyc:checked ~ .nyc,
+.container #sidebar:checked ~ .sidebar,
+.container #activity:checked ~ .activity {
+    background-size: contain;
+  }
+  .container #slider:checked ~ .slider .return-icon,
+.container #gallery:checked ~ .gallery .return-icon,
+.container #split:checked ~ .split .return-icon,
+.container #apple:checked ~ .apple .return-icon,
+.container #nyc:checked ~ .nyc .return-icon,
+.container #sidebar:checked ~ .sidebar .return-icon,
+.container #activity:checked ~ .activity .return-icon {
+    top: 30%;
+    left: 90%;
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

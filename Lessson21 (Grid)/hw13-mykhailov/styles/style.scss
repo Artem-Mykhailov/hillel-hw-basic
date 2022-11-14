@@ -1,0 +1,223 @@
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+p,
+h2 {
+  margin: 0;
+}
+
+input {
+  display: none;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  max-width: 1140px;
+  margin: 20px auto;
+  grid-template-columns: repeat (4, minmax(200px, 1fr));
+  grid-template-rows: repeat (4, 20%);
+  grid-gap: 5px;
+  grid-template-areas:
+    "slider gallery gallery split"
+    "apple  gallery gallery split"
+    "nyc    nyc     sidebar activity";
+
+  .gallery-block {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+
+    .return-icon {
+      display: none;
+    }
+
+    &:hover {
+      .gallery-block-hover {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+
+    &-hover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 18px;
+      opacity: 0;
+      font-size: 11px;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      color: wheat;
+      transition: all 0.5s;
+
+      .svg-pic-c {
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      .svg-pic {
+        display: inline-block;
+        margin-right: 3px;
+      }
+    }
+
+    &-text {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: 54px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      color: bisque;
+      z-index: 100;
+
+      .category {
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid rgba(202, 196, 196, 0.507);
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .block-title {
+        font-size: 18px;
+        transition: all 0.7s;
+
+        &:hover {
+          color: rgb(43, 93, 228);
+        }
+      }
+
+      .big-title {
+        font-size: 36px;
+      }
+    }
+  }
+
+  .slider {
+    background-image: $slider;
+    grid-area: slider;
+  }
+
+  #slider:checked ~ .slider,
+  #gallery:checked ~ .gallery,
+  #split:checked ~ .split,
+  #apple:checked ~ .apple,
+  #nyc:checked ~ .nyc,
+  #sidebar:checked ~ .sidebar,
+  #activity:checked ~ .activity {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    background-size: auto;
+
+    .gallery-block-hover {
+      display: none;
+    }
+
+    .gallery-block-text {
+      display: none;
+    }
+
+    .return-icon {
+      display: block;
+      position: absolute;
+      top: 12%;
+      left: 66%;
+      font-size: 40px;
+      color: white;
+      transition: all 0.5s;
+
+      &:hover {
+        color: rgb(43, 93, 228);
+      }
+    }
+  }
+
+  #split:checked ~ .split {
+    .return-icon {
+      color: black;
+    }
+  }
+
+  .gallery {
+    background-image: $gallery;
+    grid-area: gallery;
+  }
+
+  .split {
+    background-image: $split;
+    grid-area: split;
+  }
+  .apple {
+    background-image: $apple;
+    grid-area: apple;
+  }
+  .nyc {
+    background-image: $nyc;
+    grid-area: nyc;
+  }
+  .sidebar {
+    background-image: $sidebar;
+    grid-area: sidebar;
+  }
+  .activity {
+    background-image: $activity;
+    grid-area: activity;
+  }
+}
+
+@media only screen and (max-width: 681px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 50%);
+    grid-gap: 0px;
+    grid-template-areas:
+      "slider"
+      "gallery"
+      "split"
+      "apple"
+      "nyc"
+      "sidebar"
+      "activity";
+
+    #slider:checked ~ .slider,
+    #gallery:checked ~ .gallery,
+    #split:checked ~ .split,
+    #apple:checked ~ .apple,
+    #nyc:checked ~ .nyc,
+    #sidebar:checked ~ .sidebar,
+    #activity:checked ~ .activity {
+      background-size: contain;
+      .return-icon {
+        top: 30%;
+        left: 90%;
+        font-size: 24px;
+      }
+    }
+  }
+}
